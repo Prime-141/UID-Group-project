@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            background-color: rgb(0, 0, 0);
+            text-align: center;
+            color: white;
+            scroll-behavior: smooth;
+            
+        }
+        .wrap{
+            display: flex;
+           
+            gap: 20px;
+            justify-content: flex-start;
+            margin-top: 20px;
+            overflow-x: auto;
+            padding: 20px 20px 40px 20px;
+            scroll-behavior: smooth;
+        }
+        
+        
+       
+        .container{
+            width: 220px;
+            background-color: rgb(0, 0, 0);
+            
+            border-radius: 10px;
+            overflow: hidden;
+            text-align: center;
+           
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+            flex-shrink: 0;
+           
+
+        }
+        .container:hover{
+            transform: scale(1.05);
+            transform: skew(1deg);
+            transition: 0.9s;
+           
+            box-shadow: 5px 5px 5px rgb(0, 237, 254), 10px 10px 5px rgb(5, 25, 236), 20px 20px 50px rgb(250, 4, 4);
+        }
+        img{
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+        }
+        .details{
+            padding: 1px;
+            text-align: center;
+                       
+        }
+        h2{
+            text-align: center;
+            color: black;
+            font-family: Arial, Helvetica, sans-serif;
+            text-transform: uppercase;
+        }
+        nav{
+            position: fixed;
+            width: 100%;
+            background-color: #111;
+            padding: 10px 0;
+            top: 0;
+            z-index: 999;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+        nav a{
+            color: white;
+            text-decoration: none;
+            margin: 0 20px;
+            font-weight: bold;
+            transition: transform 0.3s ease;
+            text-shadow: 0.3s ease;
+        }
+        nav a:hover{
+            color: red;
+            transform: scale(1.1);
+        }
+        section{
+            padding: 50px 20px;
+            height: auto;
+            scroll-behavior: smooth;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            
+
+        }
+        
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="#animated">Animated</a>
+        <a href="#hollywood">Hollywood</a>
+        <a href="#bollywood">Bollywood</a>
+        <a href="#south">South</a>
+        <a href="#upcoming">Upcoming movies</a>
+    </nav>
+<section id="animated" >
+    
+    <div class="wrap"> 
+        <div class="container">
+            <img src="A_Minecraft_Movie_poster.jpg">
+            <div class="details">
+                <b>Minecraft</b> <br>
+                Adventure/Comedy
+            </div>
+        </div>
+        
+        <div class="container">
+            <img src="Transformers_One_Official_Poster.jpg">
+            <div class="details">
+                <b>Transformers One</b><br>
+                Sci-Fi/Action/Animation
+            </div>
+        </div>
+        <div class="container">
+            <img src="p_insideout2_now_available_disneyplus_d24c051c.jpeg">
+            <div class="details">
+                <b>Inside Out 2</b><br>
+                Animated/Family/Emotional/<br>Comedy
+            </div>
+        </div>
+        <div class="container">
+            <img src="wild robot.jpeg">
+            <div class="details">
+                <b>Wild Robot</b><br>
+                Animated/Family/Emotional
+            </div>
+        </div>
+        <div class="container">
+            <img src="moana 2.jpeg">
+            <div class="details">
+                <b>Moana 2</b><br>
+                Animated/Adventure
+            </div>
+        </div>
+        <div class="container">
+            <img src="Kung_Fu_Panda_4_poster.jpg">
+            <div class="details">
+                <b>Kung fu Panda 4</b><br>
+                Animated/Action/Comedy
+            </div>
+        </div>
+        <div class="container">
+            <img src="dp4.jpeg">
+            <div class="details">
+                <b>Despicable Me 4</b><br>
+                Animated/Action/Comedy
+            </div>
+        </div>
+        <div class="container">
+            <img src="mufasa.jpg">
+            <div class="details">
+                <b>Mufasa : The lion King</b><br>
+                Animated/Adventure
+            </div>
+        </div>
+        <div class="container">
+            <img src="the bad guys.jpeg">
+            <div class="details">
+                <b>The Bad Guys</b><br>
+                Animated/Comedy
+            </div>
+        </div>
+        <div class="container">
+            <img src="wallace.jpeg">
+            <div class="details">
+                <b>Wallace and Gromit </b><br>
+                Animated/Adventure/Comedy
+            </div>
+        </div>
+        <div class="container">
+            <img src="if.jpeg">
+            <div class="details">
+                <b>IF</b><br>
+                Animated/Adventure/Drama
+            </div>
+        </div>
+    </div>
+</section>
+<section id="hollywood">
+    
+    <div class="wrap">
+        <div class="container">
+            <img src="Gladiator_II_(2024)_poster.jpg">
+            <div class="details">
+                <b>Gladiator_II_</b><br>
+                Action/Adventure
+            </div>
+        </div>
+        <div class="container">
+            <img src="The_Fall_Guy_(2024)_poster.jpg">
+            <div class="details">
+                <b>The Fall Guy</b><br>
+                Action/Comedy
+            </div>
+        </div>
+        <div class="container">
+            <img src="trap.jpg">
+            <div class="details">
+                <b>Trap</b><br>
+                Psychological/Thriller
+            </div>
+        </div>
+        <div class="container">
+            <img src="Atlas.jpg">
+            <div class="details">
+                <b>Atlas</b><br>
+                Sci-Fi/Action
+            </div>
+        </div>
+        <div class="container">
+            <img src="the order.jpg">
+            <div class="details">
+            <b>The Order</b><br>
+            Crime/Thriller
+            </div>
+        </div>
+        <div class="container">
+            <img src="Twisters.jpg">
+            <div class="details">
+            <b>Twisters</b><br>
+            Action/disaster
+            </div>
+        </div>
+        <div class="container">
+            <img src="kingdom.jpeg">
+            <div class="details">
+            <b>Kingdom of the Planet of the Apes</b><br>
+            Sci-Fi/Action
+            </div>
+        </div>
+        <div class="container">
+            <img src="joker.jpg">
+            <div class="details">
+            <b>Joker-2</b><br>
+            Crime/Drama/Thriller
+            </div>
+        </div>
+        <div class="container">
+            <img src="a quiet place day one.jpeg">
+            <div class="details">
+            <b>A Quiet Place Day One</b><br>
+            Horror/Thriller
+            </div>
+        </div>
+        <div class="container">
+            <img src="dune part two.avif">
+            <div class="details">
+            <b>Dune: Part Two</b><br>
+            Epic Sci-Fi
+            </div>
+        </div>
+        <div class="container">
+            <img src="smile part two.jpeg">
+            <div class="details">
+            <b>Smile: Part Two</b><br>
+            Horror
+            </div>
+        </div>
+        <div class="container">
+            <img src="Madame_Web_(film)_poster.jpg">
+            <div class="details">
+            <b>Madame Web</b><br>
+            Sci-Fi/Superhero
+            </div>
+        </div>
+        <div class="container">
+            <img src="borderlands.jpg">
+            <div class="details">
+            <b>Borderlands</b><br>
+            Sci-Fi/Action/Comedy
+            </div>
+        </div>
+        <div class="container">
+            <img src="thebeekeper.png">
+            <div class="details">
+            <b>The Beekeeper</b><br>
+            Action/Thriller
+            </div>
+        </div>
+        <div class="container">
+            <img src="deadpoolwolverine.jpg">
+            <div class="details">
+            <b>Deadpool And Wolverine</b><br>
+            Superhero/Action/Comedy
+            </div>
+        </div>
+        <div class="container">
+            <img src="Redone.webp">
+            <div class="details">
+            <b>Red One</b><br>
+            Action/Comedy
+            </div>
+        </div>
+        <div class="container">
+            <img src="venom3.jpg">
+            <div class="details">
+            <b>Venom: The Last Dance</b><br>
+            Superhero/Action
+            </div>
+        </div>
+        <div class="container">
+            <img src="godzillakong.jpg">
+            <div class="details">
+            <b>Godzilla x Kong : The New Empire</b><br>
+            Monster/Action
+            </div>
+        </div>
+
+    </div>
+</section>
+<section id="bollywood">
+
+    <div class="wrap">
+        <div class="container">
+            <img src="Fighter_film_teaser.jpg">
+            <div class="details">
+            <b>Fighter</b><br>
+            Action/Adventure
+            </div>
+        </div>
+        <div class="container">
+            <img src="Singham-Agian.jpg">
+            <div class="details">
+            <b>Singham-Agian</b><br>
+            Action/Thriller
+            </div>
+        </div>
+        <div class="container">
+            <img src="baby john.webp">
+            <div class="details">
+            <b>Baby John</b><br>
+            Action/Thriller
+            </div>
+        </div>
+        <div class="container">
+            <img src="yodha.jpg">
+            <div class="details">
+            <b>Yodha</b><br>
+            Action/Thriller
+            </div>
+        </div>
+        <div class="container">
+            <img src="stree 2.jpg">
+            <div class="details">
+            <b>Stree 2</b><br>
+            Horror/Comedy
+            </div>
+        </div>
+        <div class="container">
+            <img src="Skinader.jpeg">
+            <div class="details">
+            <b>Sikander</b><br>
+            Action/Adventure
+            </div>
+        </div>
+        <div class="container">
+            <img src="Deva.jpg">
+            <div class="details">
+            <b>Deva</b><br>
+            Action/Thriller
+            </div>
+        </div>
+        <div class="container">
+            <img src="2678612-csm.avif">
+            <div class="details">
+            <b>Chaava</b><br>
+            Action/Biopic
+            </div>
+        </div>
+        <div class="container">
+            <img src="sky force.jpeg">
+            <div class="details">
+            <b>Sky Force</b><br>
+            Action/Biopic/Thriller
+            </div>
+        </div>
+    </div>
+</section>
+<section id="south">
+
+    <div class="wrap">
+        <div class="container">
+            <img src="puspa.webp">
+            <div class="details">
+            <b>Pushpa 2 : The Rule</b><br>
+            Action/Thriller
+            </div>
+        </div>
+        <div class="container">
+            <img src="Vettaiyan.jpeg">
+            <div class="details">
+            <b>Vettaiyan</b><br>
+            Crime/Action/Thriller
+            </div>
+        </div>
+        <div class="container">
+            <img src="The-Greatest-of-All-Time-2024-Action-SciFi-Thriller-Tamil-Movie-Review.webp">
+            <div class="details">
+            <b>The Greatest of All Time</b><br>
+            Action/Sci-fi
+            </div>
+        </div>
+        <div class="container">
+            <img src="indian 2.jpeg">
+            <div class="details">
+            <b>Indian 2</b><br>
+            Action/Thriller
+            </div>
+        </div>
+        <div class="container">
+            <img src="kalki.jpeg">
+            <div class="details">
+            <b>Kalki 2898 AD</b><br>
+            Sci-fi/Action
+            </div>
+        </div>
+        <div class="container">
+            <img src="devara.jpeg">
+            <div class="details">
+            <b>Devara: Part 1</b><br>
+            Action/Thriller
+            </div>
+        </div>
+        <div class="container">
+            <img src="guntur kaaram.jpeg">
+            <div class="details">
+            <b>Guntur Kaaram</b><br>
+            Action/Romance
+            </div>
+        </div>
+        <div class="container">
+            <img src="vidaamuyarchi.jpg">
+            <div class="details">
+            <b>Viddamuyarchi</b><br>
+            Action/Thriller
+            </div>
+        </div>
+        <div class="container">
+            <img src="l2.jpeg">
+            <div class="details">
+            <b>L2: Empuraan</b><br>
+            Action/Thriller
+            </div>
+        </div>
+        <div class="container">
+            <img src="Aavesham.jpg">
+            <div class="details">
+            <b>Aavesham</b><br>
+            Action/Comedy
+            </div>
+        </div>
+        <div class="container">
+            <img src="maharaja.jpeg">
+            <div class="details">
+            <b>Maharaja</b><br>
+            Action/Thriller
+            </div>
+        </div>
+        <div class="container">
+            <img src="Amaran.avif">
+            <div class="details">
+            <b>Amaran</b><br>
+            Action/Adventure
+            </div>
+        </div>
+        <div class="container">
+            <img src="Raayan.jpeg">
+            <div class="details">
+            <b>Raayan</b><br>
+            Action/Adventure
+            </div>
+        </div>
+    </div>
+<section id="upcoming">
+    <div class="wrap">
+        <div class="container">
+            <img src="Thunderbolts.jpg">
+            <div class="details">
+                <b>Thunderbolts</b><br>
+                Superhero/Action
+
+            </div>
+        </div>
+        <div class="container">
+            <img src="Baghhi4.jpeg">
+            <div class="details">
+                <b>Baaghi</b><br>
+                Action/Thriller
+                
+            </div>
+        </div>
+        <div class="container">
+            <img src="Housefull_5.jpg">
+            <div class="details">
+                <b>Housefull 5</b><br>
+                Drama/Comedy
+                
+            </div>
+        </div>
+        <div class="container">
+            <img src="Sinner.jpg">
+            <div class="details">
+                <b>Sinner</b><br>
+                Adventure
+                
+            </div>
+        </div>
+        <div class="container">
+            <img src="Coolie.jpg">
+            <div class="details">
+                <b>Coolie</b><br>
+                Action/Thriller
+                
+            </div>
+        </div>
+        <div class="container">
+            <img src="Kesari chp 2.webp">
+            <div class="details">
+                <b>Kesari chp - 2</b><br>
+                Drama/Historical drama
+                
+            </div>
+        </div>
+        <div class="container">
+            <img src="Karate Kid.jpeg">
+            <div class="details">
+                <b>Karate Kid : Legends</b><br>
+                Action/Sport
+                
+            </div>
+        </div>
+    </div>
+</section>
+
+</body>
+</html>
