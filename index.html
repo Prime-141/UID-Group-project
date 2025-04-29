@@ -1,21 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Movies</title>
+  <style>
         body{
             margin: 0;
             padding: 0;
-            
-
+            background-color: rgb(33, 32, 32);
             text-align: center;
             color: white;
             scroll-behavior: smooth;
-            background: linear-gradient(270deg, #02e9faaa, #038fec, #c903f5);
-  background-size: 600% 600%;
-            animation: moveGradient 10s ease infinite ;
             
         }
         .wrap{
@@ -27,7 +23,6 @@
             overflow-x: auto;
             padding: 20px 20px 40px 20px;
             scroll-behavior: smooth;
-            scrollbar-width: none;
         }
         
         
@@ -45,42 +40,13 @@
            
 
         }
-        .scroll-container-wrapper{
-            position: relative;
-            width: 100%;
-            overflow: hidden;
-        }
-        .scroll-btn{
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            background:linear-gradient(45deg, rgb(231, 0, 0),rgb(0, 255, 102));
-            color: white;
-            border: none;
-            padding: 10px 15px;
-            border-radius:50% ;
-            cursor: pointer;
-            z-index: 10;
-            font-size: 20px;
-            
-        }
-        .scroll-btn.left{
-            left: 10px;
-        }
-        .scroll-btn.right{
-            right: 10px;
-        }
-        .scroll-btn:hover{
-            background:linear-gradient(45deg,rgb(17, 0, 255),red);
-        }
         .container:hover{
             transform: scale(1.05);
-            
+            transform: skew(1deg);
             transition: 0.9s;
            
             box-shadow: 5px 5px 5px rgb(0, 237, 254), 10px 10px 5px rgb(5, 25, 236), 20px 20px 50px rgb(250, 4, 4);
         }
-        
         img{
             width: 100%;
             height: 300px;
@@ -114,20 +80,13 @@
             color: white;
             text-decoration: none;
             margin: 0 20px;
-            display: inline-block;
             font-weight: bold;
-            transition: transform 5.3s ease, text-shadow 0.3s ease;
-            transition: color 0.5s ease-in;
-            transition: text-decoration 5.5s ease;
-            
+            transition: transform 0.3s ease;
+            text-shadow: 0.3s ease;
         }
         nav a:hover{
-            
-            transform: scale(1.4);
-            text-shadow: 2px 2px 5px rgb(255, 4, 4);
-            
             color: red;
-            text-decoration: underline;
+            transform: scale(1.1);
         }
         section{
             padding: 50px 20px;
@@ -136,470 +95,441 @@
             display: flex;
             flex-direction: column;
             justify-content: center;
-            
-
         }
-        h2{
-            animation: color 3s linear 1s infinite alternate, glow 2s linear 1s infinite alternate;
-        }
-        @keyframes color{
-            0%{
-                color: #7cc4e9;
-            }
-            25%{
-                color:aqua;
-                
-            }
-            50%{
-                color: magenta;
-                text-decoration: underline;
-            }
-            75%{
-                color: red;
-                
-            }
-            100%{
-                color: greenyellow;
-            }
-        }
-        @keyframes glow{
-            0%{
-                text-shadow: 2px 4px 8px cyan;
-            }
-            50%{
-                text-shadow: 4px 4px 16px magenta;
-            }
-            100%{
-                text-shadow: 6px 9px 20px green;
-            }
-        }
-        @keyframes moveGradient {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
-}
-        
-        
+        .book-btn {
+      background-color: red;
+      color: white;
+      border: none;
+      padding: 5px 20px;
+      margin-bottom: 15px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+      transition: background-color 0.3s;
+    }
+    .book-btn:hover {
+      background-color: darkred;
+    }
     </style>
 </head>
+
 <body>
+
     <nav>
-        <a href="moviehome.html">Home</a>
+        <a href="booking.html">Booking</a>
         <a href="#animated">Animated</a>
         <a href="#hollywood">Hollywood</a>
         <a href="#bollywood">Bollywood</a>
         <a href="#south">South</a>
-        <a href="#upcoming">Upcoming movies</a>
+        <a href="#upcoming">Upcoming </a>
     </nav>
-<section id="animated" >
-    <h2>ANIMATED</h2>
-<div class="scroll-container-wrapper">
 
-    <button class="scroll-btn left" onclick="scrollContent('left','animatedScroll')">&#8592;</button>
-    <div class="wrap" id="animatedScroll"> 
-        <div class="container">
-            <img src="images/A_Minecraft_Movie_poster.jpg">
-            <div class="details">
-                <b>Minecraft</b> <br>
-                Adventure/Comedy
-            </div>
-        </div>
-        
-        <div class="container">
-            <img src="images/Transformers_One_Official_Poster.jpg">
-            <div class="details">
-                <b>Transformers One</b><br>
-                Sci-Fi/Action/Animation
-            </div>
-        </div>
-        <div class="container">
-            <img src="images/p_insideout2_now_available_disneyplus_d24c051c.jpeg">
-            <div class="details">
-                <b>Inside Out 2</b><br>
-                Animated/Family/Emotional/<br>Comedy
-            </div>
-        </div>
-        <div class="container">
-            <img src="images/wild robot.jpeg">
-            <div class="details">
-                <b>Wild Robot</b><br>
-                Animated/Family/Emotional
-            </div>
-        </div>
-        <div class="container">
-            <img src="images/moana 2.jpeg">
-            <div class="details">
-                <b>Moana 2</b><br>
-                Animated/Adventure
-            </div>
-        </div>
-        <div class="container">
-            <img src="images/Kung_Fu_Panda_4_poster.jpg">
-            <div class="details">
-                <b>Kung fu Panda 4</b><br>
-                Animated/Action/Comedy
-            </div>
-        </div>
-        <div class="container">
-            <img src="images/dp4.jpeg">
-            <div class="details">
-                <b>Despicable Me 4</b><br>
-                Animated/Action/Comedy
-            </div>
-        </div>
-        <div class="container">
-            <img src="images/mufasa.jpg">
-            <div class="details">
-                <b>Mufasa : The lion King</b><br>
-                Animated/Adventure
-            </div>
-        </div>
-        <div class="container">
-            <img src="images/the bad guys.jpeg">
-            <div class="details">
-                <b>The Bad Guys</b><br>
-                Animated/Comedy
-            </div>
-        </div>
-        
-        <div class="container">
-            <img src="images/if.jpeg">
-            <div class="details">
-                <b>IF</b><br>
-                Animated/Adventure/Drama
-            </div>
-        </div>
-    </div>
-    <button class="scroll-btn right" onclick="scrollContent('right','animatedScroll')">&#8594;</button>
-</div>    
-</section>
-<section id="hollywood">
-    <h2>HOLLYWOOD</h2>
-<div class="scroll-container-wrapper">
-    <button class="scroll-btn left" onclick="scrollContent('left','hollywoodScroll')">&#8592;</button>
-    <div class="wrap" id="hollywoodScroll">
-        <div class="container">
-            <img src="images/Gladiator_II_(2024)_poster.jpg">
-            <div class="details">
-                <b>Gladiator_II_</b><br>
-                Action/Adventure
-            </div>
-        </div>
-        
-        <div class="container">
-            <img src="images/trap.jpg">
-            <div class="details">
-                <b>Trap</b><br>
-                Psychological/Thriller
-            </div>
-        </div>
-        
-        <div class="container">
-            <img src="images/the order.jpg">
-            <div class="details">
-            <b>The Order</b><br>
-            Crime/Thriller
-            </div>
-        </div>
-        
-        <div class="container">
-            <img src="images/kingdom.jpeg">
-            <div class="details">
-            <b>Kingdom of the Planet of the Apes</b><br>
-            Sci-Fi/Action
-            </div>
-        </div>
-        <div class="container">
-            <img src="images/joker.jpg">
-            <div class="details">
-            <b>Joker-2</b><br>
-            Crime/Drama/Thriller
-            </div>
-        </div>
-        <div class="container">
-            <a href="thunderbolt.html"><img src="images/Thunderbolts.jpg"></a>
-            <div class="details">
-                <b>Thunderbolts</b><br>
-                Superhero/Action
+  <section id="animated">
+    <h2>Animated Movies</h2>
+    <div class="wrap">
+      <div class="container">
+        <img src="images/A_Minecraft_Movie_poster.jpg" alt="Minecraft Movie">
+        <div class="details">
+          <b>Minecraft</b><br>Adventure/Comedy
+        </div><br>
+        <button class="book-btn" onclick="bookMovie('Minecraft')">Book Now</button>
+      </div>
 
-            </div>
-        </div>
-        <div class="container">
-            <img src="images/a quiet place day one.jpeg">
-            <div class="details">
-            <b>A Quiet Place Day One</b><br>
-            Horror/Thriller
-            </div>
-        </div>
-        <div class="container">
-            <img src="images/dune part two.avif">
-            <div class="details">
-            <b>Dune: Part Two</b><br>
-            Epic Sci-Fi
-            </div>
-        </div>
-        <div class="container">
-            <a href="Sinner.html"><img src="images/Sinner.jpg"></a>
-            <div class="details">
-                <b>Sinner</b><br>
-                Adventure
-                
-            </div>
-        </div>
-        
-        
-       
-        <div class="container">
-            <img src="images/deadpoolwolverine.jpg">
-            <div class="details">
-            <b>Deadpool And Wolverine</b><br>
-            Superhero/Action/Comedy
-            </div>
-        </div>
-        <div class="container">
-            <img src="images/Redone.webp">
-            <div class="details">
-            <b>Red One</b><br>
-            Action/Comedy
-            </div>
-        </div>
-        <div class="container">
-            <img src="images/venom3.jpg">
-            <div class="details">
-            <b>Venom: The Last Dance</b><br>
-            Superhero/Action
-            </div>
-        </div>
-        <div class="container">
-            <img src="images/godzillakong.jpg">
-            <div class="details">
-            <b>Godzilla x Kong : The New Empire</b><br>
-            Monster/Action
-            </div>
-        </div>
+      <div class="container">
+        <img src="images/dp4.jpeg.jpg" alt="Despicable Me 4">
+        <div class="details">
+          <b>Despicable Me 4</b><br>Animation/Comedy
+        </div><br>
+        <button class="book-btn" onclick="bookMovie('Despicable Me 4')">Book Now</button>
+      </div>
+      <div class="container">
+        <img src="images/Transformers_One_Official_Poster.jpg" alt="Transformers one">
+        <div class="details">
+          <b>Transformers one</b><br>Sci-fi/Action/Animation
+        </div><br>
+        <button class="book-btn" onclick="bookMovie('Transformers one')">Book Now</button>
+      </div>
+      <div class="container">
+        <img src="images/wild robot.jpeg.jpg" alt="Wild robot">
+        <div class="details">
+          <b>Wild Robot</b><br>Animated/Family/Emotional
+        </div><br>
+        <button class="book-btn" onclick="bookMovie('Wild robot')">Book Now</button>
+      </div>
+      <div class="container">
+        <img src="images/moana 2.jpeg.jpg" alt="Moana 2">
+        <div class="details">
+          <b>Moana 2</b><br>Animated/Adventure
+        </div><br>
+        <button class="book-btn" onclick="bookMovie('Moana 2')">Book Now</button>
+      </div>
+      <div class="container">
+        <img src="images/Kung_Fu_Panda_4_poster.jpg" alt="Kung Fu Panda 4">
+        <div class="details">
+          <b>Kung Fu Panda 4</b><br>Action/Comedy
+        </div><br>
+        <button class="book-btn" onclick="bookMovie('Kung Fu Panda 4')">Book Now</button>
+      </div>
+      <div class="container">
+        <img src="images/mufasa.jpg" alt="Mufasa: The Lion King">
+        <div class="details">
+          <b>Mufasa:The Lion King</b><br>Animated/Adventure
+        </div><br>
+        <button class="book-btn" onclick="bookMovie('Mufasa: The Lion King')">Book Now</button>
+      </div>
+      <div class="container">
+        <img src="images/the bad guys.jpeg.jpg" alt="The Bad Guys">
+        <div class="details">
+          <b>The Bad Guys</b><br>Animated/Comedy
+        </div><br>
+        <button class="book-btn" onclick="bookMovie('The Bad Guys')">Book Now</button>
+      </div>
+      <div class="container">
+        <img src="images/wallace.jpeg.jpg" alt="Wallace and Gromit">
+        <div class="details">
+          <b>Wallace and Gromit</b><br>Animated/Adventure/Comedy
+        </div><br>
+        <button class="book-btn" onclick="bookMovie('Wallace and Gromit')">Book Now</button>
+      </div>
+      <div class="container">
+        <img src="images/if.jpeg.jpg" alt="IF">
+        <div class="details">
+          <b>IF</b><br>Animated/Adventure/Drama
+        </div><br>
+        <button class="book-btn" onclick="bookMovie('IF')">Book Now</button>
+      </div>
+      <div class="container">
+        <img src="images/p_insideout2_now_available_disneyplus_d24c051c.jpeg.jpg" alt="Inside Out 2">
+        <div class="details">
+          <b>Inside Out 2</b><br>Animation/Family
+        </div><br>
+        <button class="book-btn" onclick="bookMovie('Inside Out 2')">Book Now</button>
+      </div>
+    </div>
+  </section>
 
+  <section id="hollywood">
+    <h2>Hollywood Movies</h2>
+    <div class="wrap">
+      <div class="container">
+        <img src="images/kingdom.jpeg.jpg" alt="Kingdom of the Planet of the Apes">
+        <div class="details">
+          <b>Kingdom of the Planet of the Apes</b><br>Action/Adventure
+        </div><br>
+        <button class="book-btn" onclick="bookMovie('Kingdom of the Planet of the Apes')">Book Now</button>
+      </div>
+      <div class="container">
+        <img src="images/Gladiator_II_(2024)_poster.jpg" alt="Gladiator II">
+        <div class="details">
+          <b>Gladiator II</b><br>Action/Adventure
+        </div><br>
+        <button class="book-btn" onclick="bookMovie('Gladiator II')">Book Now</button>
+      </div>
+      <div class="container">
+        <img src="images/The_Fall_Guy_(2024)_poster.jpg" alt="The Fall Guy">
+        <div class="details">
+          <b>The Fall Guy</b><br>Action/Comedy
+        </div><br>
+        <button class="book-btn" onclick="bookMovie('The Fall Guy')">Book Now</button>
+      </div>
+      <div class="container">
+        <img src="images/trap.jpg" alt="Trap">
+        <div class="details">
+          <b>Trap</b><br>Psychological/Thriller
+        </div><br>
+        <button class="book-btn" onclick="bookMovie('Trap')">Book Now</button>
+      </div>
+      <div class="container">
+        <img src="images/Atlas.jpg" alt="Atlas">
+        <div class="details">
+          <b>Atlas</b><br>Sci-Fi/Fiction
+        </div><br>
+        <button class="book-btn" onclick="bookMovie('Atlas')">Book Now</button>
+      </div>
+      <div class="container">
+        <img src="images/the order.jpg" alt="The Order">
+        <div class="details">
+          <b>The Order</b><br>Crime/Thriller
+        </div><br>
+        <button class="book-btn" onclick="bookMovie('The Order')">Book Now</button>
+      </div>
+      <div class="container">
+        <img src="images/Twisters.jpg" alt="Twisters">
+        <div class="details">
+          <b>Twisters</b><br>Action/Disaster
+        </div><br>
+        <button class="book-btn" onclick="bookMovie('Twisters')">Book Now</button>
+      </div>
+      <div class="container">
+        <img src="images/joker.jpg" alt="Joker 2">
+        <div class="details">
+          <b>Joker 2</b>Crime/Drama/Thriller<br>
+        </div><br>
+        <button class="book-btn" onclick="bookMovie('Joker 2')">Book Now</button>
+      </div>
+      <div class="container">
+        <img src="images/a quiet place day one.jpeg.jpg" alt="A quiet Place Day 1">
+        <div class="details">
+          <b>A Quiet Place Day 1</b>Horror/Thriller<br>
+        </div><br>
+        <button class="book-btn" onclick="bookMovie('A Quiet Place Day 1')">Book Now</button>
+      </div>
+      <div class="container">
+        <img src="images/dune part two.avif" alt="Dune Part Two">
+        <div class="details">
+          <b>Dune Part Two</b>Epic Sci-Fi<br>
+        </div><br>
+        <button class="book-btn" onclick="bookMovie('Dune Part Two')">Book Now</button>
+      </div>
+      <div class="container">
+        <img src="images/smile part two.jpeg.jpg" alt="Smile Part Two">
+        <div class="details">
+          <b>Smile Part Two</b>Horror<br>
+        </div><br>
+        <button class="book-btn" onclick="bookMovie('Smile Part Two')">Book Now</button>
+      </div>
+      <div class="container">
+        <img src="images/Madame_Web_(film)_poster.jpg" alt="Madame Web">
+        <div class="details">
+          <b>Madame Web</b>Sci-Fi/Superhero<br>
+        </div><br>
+        <button class="book-btn" onclick="bookMovie('Madame web')">Book Now</button>
+      </div>
+      <div class="container">
+        <img src="images/borderlands.jpg" alt="Borderlands">
+        <div class="details">
+          <b>Borderlands</b>Sci-Fi/Action/Comedy<br>
+        </div><br>
+        <button class="book-btn" onclick="bookMovie('Borderlands')">Book Now</button>
+      </div>
+      <div class="container">
+        <img src="images/thebeekeper.png" alt="The Beekeeper">
+        <div class="details">
+          <b>The Beekeeper</b>Action/Thriller<br>
+        </div><br>
+        <button class="book-btn" onclick="bookMovie('')">Book Now</button>
+      </div>
+      <div class="container">
+        <img src="images/deadpoolwolverine.jpg" alt="Deadpool and Wolverine">
+        <div class="details">
+          <b>Deadpool and Wolverine</b>Superhero/Action/Comedy<br>
+        </div><br>
+        <button class="book-btn" onclick="bookMovie('Deadpool and Wolverine')">Book Now</button>
+      </div>
+      <div class="container">
+        <img src="images/Redone.webp" alt="Red one">
+        <div class="details">
+          <b>Red One</b>Action/Comedy<br>
+        </div><br>
+        <button class="book-btn" onclick="bookMovie('Red One')">Book Now</button>
+      </div>
+      <div class="container">
+        <img src="images/venom3.jpg" alt="Venom: The Last Dance">
+        <div class="details">
+          <b>Venom: The Last Dance</b>Superhero/Action<br>
+        </div><br>
+        <button class="book-btn" onclick="bookMovie('Venom: The Last Dance')">Book Now</button>
+      </div>
     </div>
-    <button class="scroll-btn right" onclick="scrollContent('right','hollywoodScroll')">&#8594;</button>
-</div>    
-</section>
-<section id="bollywood">
-    <H2>BOLLYWOOD</H2>
-<div class="scroll-container-wrapper">
-    
-    <button class="scroll-btn left" onclick="scrollContent('left','bollywoodScroll')">&#8592;</button>
-    <div class="wrap" id="bollywoodScroll">
-        <div class="container">
-            <img src="images/Fighter_film_teaser.jpg">
-            <div class="details">
-            <b>Fighter</b><br>
-            Action/Adventure
-            </div>
-        </div>
-        <div class="container">
-            <img src="images/Kesari chp 2.webp">
-            <div class="details">
-                <b>Kesari chp - 2</b><br>
-                Drama/Historical drama
-                
-            </div>
-        </div>
-        <div class="container">
-            <img src="images/Singham-Agian.jpg">
-            <div class="details">
-            <b>Singham-Agian</b><br>
-            Action/Thriller
-            </div>
-        </div>
-        <div class="container">
-            <img src="images/baby john.webp">
-            <div class="details">
-            <b>Baby John</b><br>
-            Action/Thriller
-            </div>
-        </div>
-        
-        <div class="container">
-            <img src="images/stree 2.jpg">
-            <div class="details">
-            <b>Stree 2</b><br>
-            Horror/Comedy
-            </div>
-        </div>
-        <div class="container">
-            <img src="images/Skinader.jpeg">
-            <div class="details">
-            <b>Sikander</b><br>
-            Action/Adventure
-            </div>
-        </div>
-        <div class="container">
-            <img src="images/Deva.jpg">
-            <div class="details">
-            <b>Deva</b><br>
-            Action/Thriller
-            </div>
-        </div>
-        <div class="container">
-            <img src="images/2678612-csm.avif">
-            <div class="details">
-            <b>Chaava</b><br>
-            Action/Biopic
-            </div>
-        </div>
-        <div class="container">
-            <img src="images/sky force.jpeg">
-            <div class="details">
-            <b>Sky Force</b><br>
-            Action/Biopic/Thriller
-            </div>
-        </div>
+  </section>
+
+  <section id="bollywood">
+    <h2>Bollywood Movies</h2>
+    <div class="wrap">
+      <div class="container">
+        <img src="images/stree 2.jpg" alt="Stree 2">
+        <div class="details">
+          <b>Stree 2</b><br> Horror/Comedy
+        </div><br>
+        <button class="book-btn" onclick="bookMovie('Bade Miyan Chote Miyan')">Book Now</button>
+      </div>
+
+      <div class="container">
+        <img src="images/Fighter_film_teaser.jpg" alt="Fighter">
+        <div class="details">
+          <b>Fighter</b><br>Action/Adventure
+        </div><br>
+        <button class="book-btn" onclick="bookMovie('Fighter')">Book Now</button>
+      </div>
+
+      <div class="container">
+        <img src="images/Singham-Agian.jpg" alt="Singham-Again">
+        <div class="details">
+          <b>Singham-Again</b>Action/Thriller<br>
+        </div><br>
+        <button class="book-btn" onclick="bookMovie('Singham-Again')">Book Now</button>
+      </div>
+
+      <div class="container">
+        <img src="images/baby john.webp" alt="Baby John">
+        <div class="details">
+          <b>Baby John</b>Action/Thriller<br>
+        </div><br>
+        <button class="book-btn" onclick="bookMovie('Baby John')">Book Now</button>
+      </div>
+
+      <div class="container">
+        <img src="images/yodha.jpg" alt="Yoddha">
+        <div class="details">
+          <b>Yoddha</b>Action/Thriller<br>
+        </div><br>
+        <button class="book-btn" onclick="bookMovie('Yoddha')">Book Now</button>
+      </div>
+
+      <div class="container">
+        <img src="images/Skinader.jpeg.jpg" alt="Sikandar">
+        <div class="details">
+          <b>Sikandar</b>Action Adventure<br>
+        </div><br>
+        <button class="book-btn" onclick="bookMovie('Sikandar')">Book Now</button>
+      </div>
+
+      <div class="container">
+        <img src="images/Deva.jpg" alt="Deva">
+        <div class="details">
+          <b>Deva</b>Action/Thriller<br>
+        </div><br>
+        <button class="book-btn" onclick="bookMovie('Deva')">Book Now</button>
+      </div>
+
+      <div class="container">
+        <img src="images/2678612-csm.avif" alt="Chhava">
+        <div class="details">
+          <b>Chhava</b>Action/Biopic<br>
+        </div><br>
+        <button class="book-btn" onclick="bookMovie('Chhava')">Book Now</button>
+      </div>
+
+      <div class="container">
+        <img src="images/sky force.jpeg.jpg" alt="Sky Force">
+        <div class="details">
+          <b>Sky Force</b>Action/Biopic/Thriller<br>
+        </div><br>
+        <button class="book-btn" onclick="bookMovie('Sky Force')">Book Now</button>
+      </div>
     </div>
-    <button class="scroll-btn right" onclick="scrollContent('right','bollywoodScroll')">&#8594;</button>
+  </section>
+
+  <section id="south">
+    <h2>South Indian Movies</h2>
+    <div class="wrap">
+      <div class="container">
+        <img src="images/kalki.jpeg.jpg" alt="Kalki 2898 AD">
+        <div class="details">
+          <b>Kalki 2898 AD</b><br>Sci-Fi/Action
+        </div><br>
+        <button class="book-btn" onclick="bookMovie('Kalki 2898 AD')">Book Now</button>
+      </div>
+
+      <div class="container">
+        <img src="images/puspa 2.jpg" alt="Pushpa 2">
+        <div class="details">
+          <b>Pushpa 2: The Rule</b><br>Action/Drama
+        </div><br>
+        <button class="book-btn" onclick="bookMovie('Pushpa 2')">Book Now</button>
+      </div>
+
+    <div class="container">
+        <img src="images/Vettaiyan.jpeg.jpg" alt="Vettaiyan">
+        <div class="details">
+          <b>Vettaiyan</b><br>Action/Crime/Thriller
+        </div><br>
+        <button class="book-btn" onclick="bookMovie('Vettaiyan')">Book Now</button>
+      </div>
+
+    <div class="container">
+        <img src="images/The-Greatest-of-All-Time-2024-Action-SciFi-Thriller-Tamil-Movie-Review.webp" alt="The Greatest Of All Time">
+        <div class="details">
+          <b>The Greatest Of All Time</b><br>Action/Sci-Fi
+        </div><br>
+        <button class="book-btn" onclick="bookMovie('The Greatest Of All Time')">Book Now</button>
+      </div>
+
+      <div class="container">
+        <img src="images/devara.jpeg.jpg" alt="Devara: Part 1">
+        <div class="details">
+          <b>Devara: Part 1</b><br>Action/Thriller
+        </div><br>
+        <button class="book-btn" onclick="bookMovie('Devar: Part 1')">Book Now</button>
+      </div>
+
+      <div class="container">
+        <img src="images/guntur kaaram.jpeg.jpg" alt="Guntur Kaaram">
+        <div class="details">
+          <b>Guntur Kaaram</b><br>Action/Romance
+        </div><br>
+        <button class="book-btn" onclick="bookMovie('Guntur Kaaram')">Book Now</button>
+      </div>
+    </div>
+  </section>
+
+  <section id="upcoming">
+    <h2>Upcoming Movies</h2>
+    <div class="wrap">
+      <div class="container">
+        <img src="images/Thunderbolts.jpg" alt="Thunderbolts">
+        <div class="details">
+          <b>Thunderbolts</b><br>Superhero/Action
+        </div><br>
+        <button class="book-btn" onclick="bookMovie('Thunderbolts')">Book Now</button>
+      </div>
+
+      <div class="container">
+        <img src="images/Baghhi4.jpeg.jpg" alt="Baaghi 4">
+        <div class="details">
+          <b>Baaghi 4</b><br>Action/Thriller
+        </div><br>
+        <button class="book-btn" onclick="bookMovie('Baaghi 4')">Book Now</button>
+      </div>
+
+      <div class="container">
+        <img src="images/Housefull_5.jpg" alt="Housefull 5">
+        <div class="details">
+            <b>Housefull 5</b><br>Drama/Comedy
+        </div><br>
+        <button class="book-btn" onclick="bookMovie('Housefull 5')">Book Now</button>
+    </div>
+
+    <div class="container">
+        <img src="images/Sinner.jpg" alt="Sinner">
+        <div class="details">
+            <b>Sinner</b><br>Adventure
+        </div><br>
+        <button class="book-btn" onclick="bookMovie('Sinner')">Book Now</button>
+    </div>
+
+    <div class="container">
+        <img src="images/Coolie.jpg" alt="Coolie">
+        <div class="details">
+            <b>Coolie</b><br>Action/Thriller
+        </div><br>
+        <button class="book-btn" onclick="bookMovie('Coolie')">Book Now</button>
+    </div>
+
+    <div class="container">
+        <img src="images/Kesari chp 2.webp" alt="Kesari Chapter 2">
+        <div class="details">
+            <b>Kesari Chapter 2</b><br>Drama/Historical drama
+        </div><br>
+        <button class="book-btn" onclick="bookMovie('Kesari Chapter 2')">Book Now</button>
+    </div>
+
+    <div class="container">
+        <img src="images/Karate Kid.jpeg.jpg" alt="Karate Kid: Legends">
+        <div class="details">
+            <b>Karate Kid: Legends</b><br>Action/Sport
+        </div><br>
+        <button class="book-btn" onclick="bookMovie('Karate Kid: Legends')">Book Now</button>
+    </div>
 </div>
 </section>
-<section id="south">
-    <h2>SOUTH</h2>
-<div class="scroll-container-wrapper">
-    
-    <button class="scroll-btn left" onclick="scrollContent('left','southScroll')">&#8592;</button>
-    <div class="wrap" id="southScroll">
-        <div class="container">
-            <a href="Puspa2.html"><img src="images/puspa.webp"></a>
-            <div class="details">
-            <b>Pushpa 2 : The Rule</b><br>
-            Action/Thriller
-            </div>
-        </div>
-        <div class="container">
-            <a href="Vettaiyan.html"><img src="images/Vettaiyan.jpeg"></a>
-            <div class="details">
-            <b>Vettaiyan</b><br>
-            Crime/Action/Thriller
-            </div>
-        </div>
-        <div class="container">
-            <a href="GOAT.html"><img src="images/The-Greatest-of-All-Time-2024-Action-SciFi-Thriller-Tamil-Movie-Review.webp"></a>
-            <div class="details">
-            <b>The Greatest of All Time</b><br>
-            Action/Sci-fi
-            </div>
-        </div>
-        
-        
-        <div class="container">
-            <a href="Devara.html"><img src="images/devara.jpeg"></a>
-            <div class="details">
-            <b>Devara: Part 1</b><br>
-            Action/Thriller
-            </div>
-        </div>
-        <div class="container">
-            <a href="kalki.html"><img src="images/kalki29.jpg"></a>
-            <div class="details">
-            <b>Kalki 2898 AD</b><br>
-            Action/Sci-fi/Adventure
-            </div>
-        </div>
-        <div class="container">
-            <a href="Vidaamuyarchi.html"><img src="images/vidaamuyarchi.jpg"></a>
-            <div class="details">
-            <b>Viddamuyarchi</b><br>
-            Action/Thriller
-            </div>
-        </div>
-        <div class="container">
-            <a href="inside2.html"><img src="images/l2.jpeg"></a>
-            <div class="details">
-            <b>L2: Empuraan</b><br>
-            Action/Thriller
-            </div>
-        </div>
-        
-        
-        <div class="container">
-            <a href="Amaran.html"><img src="images/Amaran.avif"></a>
-            <div class="details">
-            <b>Amaran</b><br>
-            Action/Adventure
-            </div>
-        </div>
-        <div class="container">
-            <a href="Raayan.html"><img src="images/Raayan.jpeg"></a>
-            <div class="details">
-            <b>Raayan</b><br>
-            Action/Adventure
-            </div>
-        </div>
-    </div>
-    <button class="scroll-btn right" onclick="scrollContent('right','southScroll')">&#8594;</button>
-</div>
-<section id="upcoming">
 
-    <h2>UPCOMING in cinemas</h2>
-<div class="scroll-container-wrapper">
-    
-    <button class="scroll-btn left" onclick="scrollContent('left','upcomingScroll')">&#8592;</button>
-    <div class="wrap" id="upcomingScroll">
-       
-        <div class="container">
-            <a href="baaghi4.html"><img src="images/Baghhi4.jpeg"></a>
-            <div class="details">
-                <b>Baaghi 4</b><br>
-                Action/Thriller
-                
-            </div>
-        </div>
-        <div class="container">
-            <img src="images/Housefull_5.jpg">
-            <div class="details">
-                <b>Housefull 5</b><br>
-                Drama/Comedy
-                
-            </div>
-        </div>
-        
-        <div class="container">
-            <a href="Coolie.html"><img src="images/Coolie.jpg"></a>
-            <div class="details">
-                <b>Coolie</b><br>
-                Action/Thriller
-                
-            </div>
-        </div>
-        
-        <div class="container">
-            <img src="images/Karate Kid.jpeg">
-            <div class="details">
-                <b>Karate Kid : Legends</b><br>
-                Action/Sport
-                
-            </div>
-        </div>
-    </div>
-    <button class="scroll-btn right" onclick="scrollContent('right','upcomingScroll')">&#8594;</button>
-</div>
-</section>
-
-
-    <script>
-        function scrollContent(direction, id) {
-            const container = document.getElementById(id);
-            const scrollAmount = 500; // change as needed
-        
-            if (direction === 'left') {
-                container.scrollBy({
-                    left: -scrollAmount,
-                    behavior: 'smooth'
-                });
-            } else {
-                container.scrollBy({
-                    left: scrollAmount,
-                    behavior: 'smooth'
-                });
-            }
-        }
-        </script>
-        
-
+<script>
+function bookMovie(movieName) {
+    localStorage.setItem('selectedMovie', movieName);
+    window.location.href = "booking.html";
+}
+</script>
 </body>
 </html>
+
