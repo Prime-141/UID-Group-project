@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Book Your Movie Tickets</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <style>
     :root {
       --primary: #e50914;
@@ -115,6 +116,54 @@
       box-shadow: 0 0 0 3px rgba(229, 9, 20, 0.3);
     }
     
+    /* Time Slot Styles */
+    .time-slots {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+      margin-top: 15px;
+    }
+    
+    .time-slot {
+      background-color: #222;
+      border: 2px solid #444;
+      border-radius: 8px;
+      padding: 10px;
+      text-align: center;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+    
+    .time-slot:hover {
+      border-color: var(--primary);
+      transform: translateY(-2px);
+    }
+    
+    .time-slot.selected {
+      background-color: var(--primary);
+      border-color: var(--primary);
+      color: white;
+    }
+    
+    .time-slot.unavailable {
+      background-color: #333;
+      color: #666;
+      cursor: not-allowed;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .time-slot.unavailable::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 0;
+      right: 0;
+      height: 2px;
+      background-color: var(--primary);
+      transform: rotate(-5deg);
+    }
+    
     .btn {
       background-color: var(--primary);
       color: white;
@@ -129,6 +178,7 @@
       letter-spacing: 0.5px;
       text-transform: uppercase;
       box-shadow: 0 4px 15px rgba(229, 9, 20, 0.4);
+      margin-top: 20px;
     }
     
     .btn:hover {
@@ -137,8 +187,139 @@
       box-shadow: 0 6px 20px rgba(229, 9, 20, 0.5);
     }
     
-    .btn:active {
+    .btn:disabled {
+      background-color: #444;
+      cursor: not-allowed;
+      transform: none;
+      box-shadow: none;
+    }
+    
+    /* Confirmation Modal Styles */
+    .modal-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: rgba(0, 0, 0, 0.8);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 1000;
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.3s ease;
+    }
+    
+    .modal-overlay.active {
+      opacity: 1;
+      visibility: visible;
+    }
+    
+    .confirmation-modal {
+      background: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 100%);
+      border-radius: 12px;
+      padding: 40px;
+      max-width: 500px;
+      width: 90%;
+      text-align: center;
+      position: relative;
+      transform: translateY(20px);
+      transition: transform 0.3s ease;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+      border: 1px solid rgba(229, 9, 20, 0.3);
+    }
+    
+    .modal-overlay.active .confirmation-modal {
       transform: translateY(0);
+    }
+    
+    .confirmation-icon {
+      font-size: 5rem;
+      color: var(--primary);
+      margin-bottom: 20px;
+      animation: bounce 0.6s;
+    }
+    
+    .confirmation-title {
+      font-size: 2rem;
+      margin-bottom: 20px;
+      color: var(--primary);
+      background: linear-gradient(to right, var(--primary), #f5f5f5);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    
+    .confirmation-details {
+      text-align: left;
+      margin: 25px 0;
+      padding: 20px;
+      background-color: rgba(20, 20, 20, 0.5);
+      border-radius: 8px;
+      border-left: 4px solid var(--primary);
+    }
+    
+    .confirmation-details p {
+      margin-bottom: 10px;
+      display: flex;
+      justify-content: space-between;
+    }
+    
+    .confirmation-details p span:first-child {
+      color: var(--gray);
+      font-weight: 500;
+    }
+    
+    .confirmation-details p span:last-child {
+      color: var(--light);
+      font-weight: 600;
+    }
+    
+    .ticket-qr {
+      width: 150px;
+      height: 150px;
+      margin: 20px auto;
+      background-color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 8px;
+    }
+    
+    .ticket-qr i {
+      font-size: 5rem;
+      color: var(--dark);
+    }
+    
+    .modal-btn {
+      background-color: var(--primary);
+      color: white;
+      border: none;
+      padding: 12px 25px;
+      font-size: 1rem;
+      font-weight: 600;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      margin-top: 20px;
+      box-shadow: 0 4px 15px rgba(229, 9, 20, 0.4);
+    }
+    
+    .modal-btn:hover {
+      background-color: var(--primary-dark);
+      transform: translateY(-2px);
+    }
+    
+    /* Animations */
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    
+    @keyframes bounce {
+      0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
+      40% {transform: translateY(-20px);}
+      60% {transform: translateY(-10px);}
     }
     
     .confetti {
@@ -147,13 +328,8 @@
       height: 10px;
       background-color: var(--primary);
       opacity: 0;
-      z-index: 1000;
+      z-index: 1001;
       animation: confetti 3s ease-out;
-    }
-    
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
     }
     
     @keyframes confetti {
@@ -172,6 +348,18 @@
       
       .movie-title {
         font-size: 1.4rem;
+      }
+      
+      .confirmation-modal {
+        padding: 30px 20px;
+      }
+      
+      .confirmation-title {
+        font-size: 1.5rem;
+      }
+      
+      .time-slots {
+        grid-template-columns: repeat(2, 1fr);
       }
     }
   </style>
@@ -195,6 +383,14 @@
       </div>
       
       <div class="form-group">
+        <label>Select Show Time</label>
+        <div class="time-slots" id="timeSlots">
+          <!-- Time slots generated using Javascript -->
+        </div>
+        <input type="hidden" id="selectedTime" required>
+      </div>
+      
+      <div class="form-group">
         <label for="seats">Number of Seats</label>
         <select id="seats" class="form-control" required>
           <option value="">Select number of seats</option>
@@ -209,8 +405,23 @@
         </select>
       </div>
       
-      <button type="submit" class="btn">Confirm Booking</button>
+      <button type="submit" class="btn" id="submitBtn" disabled>Confirm Booking</button>
     </form>
+  </div>
+
+  <!-- Confirmation Modal -->
+  <div class="modal-overlay" id="confirmationModal">
+    <div class="confirmation-modal">
+      <div class="confirmation-icon">🎟️</div>
+      <h2 class="confirmation-title">Booking Confirmed!</h2>
+      <div class="confirmation-details" id="confirmationDetails">
+        <!-- Details will be inserted here by JavaScript -->
+      </div>
+      <div class="ticket-qr">
+        <i class="fas fa-qrcode"></i>
+      </div>
+      <button class="modal-btn" id="closeModal">Download Ticket</button>
+    </div>
   </div>
 
   <script>
@@ -227,6 +438,47 @@
     // Set minimum date to today
     const today = new Date().toISOString().split('T')[0];
     document.getElementById('date').setAttribute('min', today);
+
+    // Time slots data
+    const timeSlots = [
+      { time: "10:00 AM", available: true },
+      { time: "1:30 PM", available: true },
+      { time: "4:00 PM", available: true },
+      { time: "6:30 PM", available: true },
+      { time: "9:00 PM", available: true },
+      { time: "11:30 PM", available: false }
+    ];
+
+    // Generate time slots
+    function generateTimeSlots() {
+      const timeSlotsContainer = document.getElementById('timeSlots');
+      timeSlotsContainer.innerHTML = '';
+      
+      timeSlots.forEach(slot => {
+        const timeSlot = document.createElement('div');
+        timeSlot.className = `time-slot ${slot.available ? '' : 'unavailable'}`;
+        timeSlot.textContent = slot.time;
+        
+        if (slot.available) {
+          timeSlot.addEventListener('click', () => {
+            // Remove selected class from all slots
+            document.querySelectorAll('.time-slot').forEach(s => {
+              s.classList.remove('selected');
+            });
+            
+            // Add selected class to clicked slot
+            timeSlot.classList.add('selected');
+            document.getElementById('selectedTime').value = slot.time;
+            document.getElementById('submitBtn').disabled = false;
+          });
+        }
+        
+        timeSlotsContainer.appendChild(timeSlot);
+      });
+    }
+
+    // Initialize time slots
+    generateTimeSlots();
 
     function createConfetti() {
       const colors = ['#e50914', '#f5f5f5', '#ffbe0b', '#3a86ff', '#8338ec'];
@@ -251,32 +503,50 @@
       event.preventDefault();
       const name = document.getElementById('username').value;
       const date = document.getElementById('date').value;
+      const time = document.getElementById('selectedTime').value;
       const seats = document.getElementById('seats').value;
 
-      // Create a nice confirmation message
-      const confirmation = `
-        🎟️ Booking Confirmed! 🎬
-        ========================
-        Movie: ${movieName}
-        Name: ${name}
-        Date: ${new Date(date).toLocaleDateString('en-US', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' })}
-        Seats: ${seats}
-        ========================
-        Enjoy your movie experience!
+      // Format the date nicely
+      const formattedDate = new Date(date).toLocaleDateString('en-US', { 
+        weekday: 'long', 
+        year: 'numeric', 
+        month: 'long', 
+        day: 'numeric' 
+      });
+
+      // Create confirmation details HTML
+      const confirmationHTML = `
+        <p><span>Movie:</span> <span>${movieName}</span></p>
+        <p><span>Name:</span> <span>${name}</span></p>
+        <p><span>Date:</span> <span>${formattedDate}</span></p>
+        <p><span>Time:</span> <span>${time}</span></p>
+        <p><span>Seats:</span> <span>${seats}</span></p>
+        <p><span>Booking ID:</span> <span>${Math.random().toString(36).substring(2, 10).toUpperCase()}</span></p>
       `;
-      
+
+      // Insert into modal
+      document.getElementById('confirmationDetails').innerHTML = confirmationHTML;
+
       // Show confetti animation
       createConfetti();
-      
-      // Show styled alert
-      setTimeout(() => {
-        alert(confirmation);
-        
+
+      // Show modal
+      document.getElementById('confirmationModal').classList.add('active');
+
+      // Close modal handler
+      document.getElementById('closeModal').addEventListener('click', () => {
+        document.getElementById('confirmationModal').classList.remove('active');
         // Clear the storage and redirect
         localStorage.removeItem('selectedMovie');
         window.location.href = "index.html";
-      }, 800);
+      });
     }
+
+    // Update time slots when date changes
+    document.getElementById('date').addEventListener('change', function() {
+      generateTimeSlots();
+      document.getElementById('submitBtn').disabled = true;
+    });
   </script>
 </body>
 </html>
