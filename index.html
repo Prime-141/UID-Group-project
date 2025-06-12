@@ -24,6 +24,7 @@
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       background-color: var(--dark);
+      
       color: var(--light);
       scroll-behavior: smooth;
     }
@@ -133,6 +134,7 @@
     .hero {
       height: 80vh;
       background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://via.placeholder.com/1920x1080') center/cover no-repeat;
+      background-image: url(blurrtheaterimage.png);
       display: flex;
       align-items: center;
       padding: 0 5%;
@@ -266,7 +268,7 @@
     }
     
     .movie-card {
-      min-width: 220px;
+      max-width: 300px;
       background-color: var(--light-dark);
       border-radius: 10px;
       overflow: hidden;
@@ -548,6 +550,7 @@
         height: 225px;
       }
     }
+    
   </style>
 </head>
 <body>
@@ -559,10 +562,7 @@
       </a>
       <div class="nav-links">
         <a href="#trending">Trending</a>
-        <a href="#animated">Animated</a>
-        <a href="#hollywood">Hollywood</a>
-        <a href="#bollywood">Bollywood</a>
-        <a href="#south">South</a>
+        <a href="CINEMAS.html">Movies</a>
         <a href="#upcoming">Upcoming</a>
       </div>
       <div class="search-bar">
@@ -581,8 +581,8 @@
         <a href="#trending" class="btn btn-primary">
           <i class="fas fa-ticket-alt"></i> Book Now
         </a>
-        <a href="#upcoming" class="btn btn-secondary">
-          <i class="fas fa-calendar-alt"></i> Coming Soon
+        <a href="nayakaam.html" class="btn btn-secondary">
+          Login
         </a>
       </div>
     </div>
@@ -597,7 +597,7 @@
     <div class="movie-container">
       <div class="movie-card">
         <span class="badge">Hot</span>
-        <img src="images/A_Minecraft_Movie_poster.jpg" alt="Minecraft Movie" class="movie-poster">
+        <img src="minecraft-wallpaper.jpg" alt="Minecraft Movie" class="movie-poster">
         <div class="movie-info">
           <h3 class="movie-title">Minecraft</h3>
           <p class="movie-genre">Adventure/Comedy</p>
@@ -611,7 +611,7 @@
       </div>
       <div class="movie-card">
         <span class="badge">New</span>
-        <img src="images/dp4.jpeg.jpg" alt="Despicable Me 4" class="movie-poster">
+        <img src="dp4.jpeg" alt="Despicable Me 4" class="movie-poster">
         <div class="movie-info">
           <h3 class="movie-title">Despicable Me 4</h3>
           <p class="movie-genre">Animation/Comedy</p>
@@ -624,7 +624,7 @@
         </div>
       </div>
       <div class="movie-card">
-        <img src="images/Transformers_One_Official_Poster.jpg" alt="Transformers One" class="movie-poster">
+        <img src="transformer-wallpaper.jpg" alt="Transformers One" class="movie-poster">
         <div class="movie-info">
           <h3 class="movie-title">Transformers One</h3>
           <p class="movie-genre">Sci-fi/Action</p>
@@ -637,7 +637,7 @@
         </div>
       </div>
       <div class="movie-card">
-        <img src="images/Kung_Fu_Panda_4_poster.jpg" alt="Kung Fu Panda 4" class="movie-poster">
+        <img src="Kung_Fu_Panda_4_poster.jpg" alt="Kung Fu Panda 4" class="movie-poster">
         <div class="movie-info">
           <h3 class="movie-title">Kung Fu Panda 4</h3>
           <p class="movie-genre">Action/Comedy</p>
@@ -651,7 +651,7 @@
       </div>
       <div class="movie-card">
         <span class="badge">Hot</span>
-        <img src="images/deadpoolwolverine.jpg" alt="Deadpool & Wolverine" class="movie-poster">
+        <img src="deadpool-wolverine-wallpapers.jpg" alt="Deadpool & Wolverine" class="movie-poster">
         <div class="movie-info">
           <h3 class="movie-title">Deadpool & Wolverine</h3>
           <p class="movie-genre">Action/Comedy</p>
@@ -664,7 +664,7 @@
         </div>
       </div>
       <div class="movie-card">
-        <img src="images/joker.jpg" alt="Joker 2" class="movie-poster">
+        <img src="joker-folie-a-deux.avif" alt="Joker 2" class="movie-poster">
         <div class="movie-info">
           <h3 class="movie-title">Joker 2</h3>
           <p class="movie-genre">Crime/Drama</p>
@@ -676,181 +676,15 @@
           </button>
         </div>
       </div>
-    </div>
-  </section>
-
-  <!-- Animated Movies -->
-  <section id="animated">
-    <div class="section-header">
-      <h2 class="section-title">Animated Movies</h2>
-      <a href="#" class="view-all">View All <i class="fas fa-chevron-right"></i></a>
-    </div>
-    <div class="movie-container">
       <div class="movie-card">
-        <img src="images/wild robot.jpeg.jpg" alt="Wild Robot" class="movie-poster">
+        <img src="Housefull_5.jpg" alt="Housefull_5" class="movie-poster">
         <div class="movie-info">
-          <h3 class="movie-title">Wild Robot</h3>
-          <p class="movie-genre">Animated/Family</p>
-          <div class="movie-rating">
-            <i class="fas fa-star"></i> 4.2/5
-          </div>
-          <button class="book-btn" onclick="bookMovie('Wild Robot')">
-            <i class="fas fa-ticket-alt"></i> Book Now
-          </button>
-        </div>
-      </div>
-      <div class="movie-card">
-        <img src="images/moana 2.jpeg.jpg" alt="Moana 2" class="movie-poster">
-        <div class="movie-info">
-          <h3 class="movie-title">Moana 2</h3>
-          <p class="movie-genre">Animated/Adventure</p>
-          <div class="movie-rating">
-            <i class="fas fa-star"></i> 4.5/5
-          </div>
-          <button class="book-btn" onclick="bookMovie('Moana 2')">
-            <i class="fas fa-ticket-alt"></i> Book Now
-          </button>
-        </div>
-      </div>
-      <div class="movie-card">
-        <img src="images/mufasa.jpg" alt="Mufasa: The Lion King" class="movie-poster">
-        <div class="movie-info">
-          <h3 class="movie-title">Mufasa: The Lion King</h3>
-          <p class="movie-genre">Animated/Adventure</p>
-          <div class="movie-rating">
-            <i class="fas fa-star"></i> 4.3/5
-          </div>
-          <button class="book-btn" onclick="bookMovie('Mufasa: The Lion King')">
-            <i class="fas fa-ticket-alt"></i> Book Now
-          </button>
-        </div>
-      </div>
-      <div class="movie-card">
-        <img src="images/the bad guys.jpeg.jpg" alt="The Bad Guys" class="movie-poster">
-        <div class="movie-info">
-          <h3 class="movie-title">The Bad Guys</h3>
-          <p class="movie-genre">Animated/Comedy</p>
-          <div class="movie-rating">
-            <i class="fas fa-star"></i> 4.1/5
-          </div>
-          <button class="book-btn" onclick="bookMovie('The Bad Guys')">
-            <i class="fas fa-ticket-alt"></i> Book Now
-          </button>
-        </div>
-      </div>
-      <div class="movie-card">
-        <img src="images/wallace.jpeg.jpg" alt="Wallace and Gromit" class="movie-poster">
-        <div class="movie-info">
-          <h3 class="movie-title">Wallace & Gromit</h3>
-          <p class="movie-genre">Animated/Comedy</p>
-          <div class="movie-rating">
-            <i class="fas fa-star"></i> 4.4/5
-          </div>
-          <button class="book-btn" onclick="bookMovie('Wallace and Gromit')">
-            <i class="fas fa-ticket-alt"></i> Book Now
-          </button>
-        </div>
-      </div>
-      <div class="movie-card">
-        <span class="badge">New</span>
-        <img src="images/p_insideout2_now_available_disneyplus_d24c051c.jpeg.jpg" alt="Inside Out 2" class="movie-poster">
-        <div class="movie-info">
-          <h3 class="movie-title">Inside Out 2</h3>
-          <p class="movie-genre">Animation/Family</p>
-          <div class="movie-rating">
-            <i class="fas fa-star"></i> 4.7/5
-          </div>
-          <button class="book-btn" onclick="bookMovie('Inside Out 2')">
-            <i class="fas fa-ticket-alt"></i> Book Now
-          </button>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Hollywood Movies -->
-  <section id="hollywood">
-    <div class="section-header">
-      <h2 class="section-title">Hollywood Movies</h2>
-      <a href="#" class="view-all">View All <i class="fas fa-chevron-right"></i></a>
-    </div>
-    <div class="movie-container">
-      <div class="movie-card">
-        <img src="images/kingdom.jpeg.jpg" alt="Kingdom of the Planet of the Apes" class="movie-poster">
-        <div class="movie-info">
-          <h3 class="movie-title">Kingdom of the Planet of the Apes</h3>
-          <p class="movie-genre">Action/Adventure</p>
-          <div class="movie-rating">
-            <i class="fas fa-star"></i> 4.3/5
-          </div>
-          <button class="book-btn" onclick="bookMovie('Kingdom of the Planet of the Apes')">
-            <i class="fas fa-ticket-alt"></i> Book Now
-          </button>
-        </div>
-      </div>
-      <div class="movie-card">
-        <span class="badge">Coming Soon</span>
-        <img src="images/Gladiator_II_(2024)_poster.jpg" alt="Gladiator II" class="movie-poster">
-        <div class="movie-info">
-          <h3 class="movie-title">Gladiator II</h3>
-          <p class="movie-genre">Action/Drama</p>
-          <div class="movie-rating">
-            <i class="fas fa-star"></i> -
-          </div>
-          <button class="book-btn" onclick="bookMovie('Gladiator II')">
-            <i class="fas fa-bell"></i> Notify Me
-          </button>
-        </div>
-      </div>
-      <div class="movie-card">
-        <img src="images/The_Fall_Guy_(2024)_poster.jpg" alt="The Fall Guy" class="movie-poster">
-        <div class="movie-info">
-          <h3 class="movie-title">The Fall Guy</h3>
-          <p class="movie-genre">Action/Comedy</p>
-          <div class="movie-rating">
-            <i class="fas fa-star"></i> 4.2/5
-          </div>
-          <button class="book-btn" onclick="bookMovie('The Fall Guy')">
-            <i class="fas fa-ticket-alt"></i> Book Now
-          </button>
-        </div>
-      </div>
-      <div class="movie-card">
-        <img src="images/trap.jpg" alt="Trap" class="movie-poster">
-        <div class="movie-info">
-          <h3 class="movie-title">Trap</h3>
-          <p class="movie-genre">Thriller</p>
+          <h3 class="movie-title">Housefull 5</h3>
+          <p class="movie-genre">Comedey/Drama</p>
           <div class="movie-rating">
             <i class="fas fa-star"></i> 4.0/5
           </div>
-          <button class="book-btn" onclick="bookMovie('Trap')">
-            <i class="fas fa-ticket-alt"></i> Book Now
-          </button>
-        </div>
-      </div>
-      <div class="movie-card">
-        <img src="images/Atlas.jpg" alt="Atlas" class="movie-poster">
-        <div class="movie-info">
-          <h3 class="movie-title">Atlas</h3>
-          <p class="movie-genre">Sci-Fi</p>
-          <div class="movie-rating">
-            <i class="fas fa-star"></i> 3.9/5
-          </div>
-          <button class="book-btn" onclick="bookMovie('Atlas')">
-            <i class="fas fa-ticket-alt"></i> Book Now
-          </button>
-        </div>
-      </div>
-      <div class="movie-card">
-        <span class="badge">Hot</span>
-        <img src="images/dune part two.avif" alt="Dune Part Two" class="movie-poster">
-        <div class="movie-info">
-          <h3 class="movie-title">Dune Part Two</h3>
-          <p class="movie-genre">Epic Sci-Fi</p>
-          <div class="movie-rating">
-            <i class="fas fa-star"></i> 4.8/5
-          </div>
-          <button class="book-btn" onclick="bookMovie('Dune Part Two')">
+          <button class="book-btn" onclick="bookMovie('Housefull 5')">
             <i class="fas fa-ticket-alt"></i> Book Now
           </button>
         </div>
@@ -858,173 +692,11 @@
     </div>
   </section>
 
-  <!-- Bollywood Movies -->
-  <section id="bollywood">
-    <div class="section-header">
-      <h2 class="section-title">Bollywood Movies</h2>
-      <a href="#" class="view-all">View All <i class="fas fa-chevron-right"></i></a>
-    </div>
-    <div class="movie-container">
-      <div class="movie-card">
-        <img src="images/stree 2.jpg" alt="Stree 2" class="movie-poster">
-        <div class="movie-info">
-          <h3 class="movie-title">Stree 2</h3>
-          <p class="movie-genre">Horror/Comedy</p>
-          <div class="movie-rating">
-            <i class="fas fa-star"></i> 4.2/5
-          </div>
-          <button class="book-btn" onclick="bookMovie('Stree 2')">
-            <i class="fas fa-ticket-alt"></i> Book Now
-          </button>
-        </div>
-      </div>
-      <div class="movie-card">
-        <img src="images/Fighter_film_teaser.jpg" alt="Fighter" class="movie-poster">
-        <div class="movie-info">
-          <h3 class="movie-title">Fighter</h3>
-          <p class="movie-genre">Action/Adventure</p>
-          <div class="movie-rating">
-            <i class="fas fa-star"></i> 4.5/5
-          </div>
-          <button class="book-btn" onclick="bookMovie('Fighter')">
-            <i class="fas fa-ticket-alt"></i> Book Now
-          </button>
-        </div>
-      </div>
-      <div class="movie-card">
-        <span class="badge">Coming Soon</span>
-        <img src="images/Singham-Agian.jpg" alt="Singham Again" class="movie-poster">
-        <div class="movie-info">
-          <h3 class="movie-title">Singham Again</h3>
-          <p class="movie-genre">Action/Thriller</p>
-          <div class="movie-rating">
-            <i class="fas fa-star"></i> -
-          </div>
-          <button class="book-btn" onclick="bookMovie('Singham Again')">
-            <i class="fas fa-bell"></i> Notify Me
-          </button>
-        </div>
-      </div>
-      <div class="movie-card">
-        <img src="images/baby john.webp" alt="Baby John" class="movie-poster">
-        <div class="movie-info">
-          <h3 class="movie-title">Baby John</h3>
-          <p class="movie-genre">Action/Thriller</p>
-          <div class="movie-rating">
-            <i class="fas fa-star"></i> 4.1/5
-          </div>
-          <button class="book-btn" onclick="bookMovie('Baby John')">
-            <i class="fas fa-ticket-alt"></i> Book Now
-          </button>
-        </div>
-      </div>
-      <div class="movie-card">
-        <img src="images/yodha.jpg" alt="Yoddha" class="movie-poster">
-        <div class="movie-info">
-          <h3 class="movie-title">Yoddha</h3>
-          <p class="movie-genre">Action/Thriller</p>
-          <div class="movie-rating">
-            <i class="fas fa-star"></i> 4.0/5
-          </div>
-          <button class="book-btn" onclick="bookMovie('Yoddha')">
-            <i class="fas fa-ticket-alt"></i> Book Now
-          </button>
-        </div>
-      </div>
-      <div class="movie-card">
-        <img src="images/Skinader.jpeg.jpg" alt="Sikandar" class="movie-poster">
-        <div class="movie-info">
-          <h3 class="movie-title">Sikandar</h3>
-          <p class="movie-genre">Action Adventure</p>
-          <div class="movie-rating">
-            <i class="fas fa-star"></i> 3.9/5
-          </div>
-          <button class="book-btn" onclick="bookMovie('Sikandar')">
-            <i class="fas fa-ticket-alt"></i> Book Now
-          </button>
-        </div>
-      </div>
-    </div>
-  </section>
+ 
+  
 
-  <!-- South Indian Movies -->
-  <section id="south">
-    <div class="section-header">
-      <h2 class="section-title">South Indian Movies</h2>
-      <a href="#" class="view-all">View All <i class="fas fa-chevron-right"></i></a>
-    </div>
-    <div class="movie-container">
-      <div class="movie-card">
-        <span class="badge">Hot</span>
-        <img src="images/kalki.jpeg.jpg" alt="Kalki 2898 AD" class="movie-poster">
-        <div class="movie-info">
-          <h3 class="movie-title">Kalki 2898 AD</h3>
-          <p class="movie-genre">Sci-Fi/Action</p>
-          <div class="movie-rating">
-            <i class="fas fa-star"></i> 4.7/5
-          </div>
-          <button class="book-btn" onclick="bookMovie('Kalki 2898 AD')">
-            <i class="fas fa-ticket-alt"></i> Book Now
-          </button>
-        </div>
-      </div>
-      <div class="movie-card">
-        <span class="badge">Coming Soon</span>
-        <img src="images/puspa 2.jpg" alt="Pushpa 2" class="movie-poster">
-        <div class="movie-info">
-          <h3 class="movie-title">Pushpa 2: The Rule</h3>
-          <p class="movie-genre">Action/Drama</p>
-          <div class="movie-rating">
-            <i class="fas fa-star"></i> -
-          </div>
-          <button class="book-btn" onclick="bookMovie('Pushpa 2')">
-            <i class="fas fa-bell"></i> Notify Me
-          </button>
-        </div>
-      </div>
-      <div class="movie-card">
-        <span class="badge">Hot</span>
-        <img src="images/Vettaiyan.jpeg.jpg" alt="Vettaiyan" class="movie-poster">
-        <div class="movie-info">
-            <h3 class="movie-title">Vettaiyan</h3>
-            <p class="movie-genre">Action/Drama</p>
-            <div class="movie-rating">
-              <i class="fas fa-star"></i> 3.5/5
-            </div>
-            <button class="book-btn" onclick="bookMovie('Vettaiyan')">
-              <i class="fas fa-ticket-alt"></i> Book Now
-            </button>
-          </div>
-        </div>
-        <div class="movie-card">
-            <img src="images/Allu arjun.jpg" alt="Allu Arjun" class="movie-poster">
-            <div class="movie-info">
-                <h3 class="movie-title">Allu Arjun</h3>
-                <p class="movie-genre">Action/Drama</p>
-                <div class="movie-rating">
-                  <i class="fas fa-star"></i> 4/5
-                </div>
-                <button class="book-btn" onclick="bookMovie('Allu Arjun')">
-                  <i class="fas fa-ticket-alt"></i> Book Now
-                </button>
-              </div>
-            </div>
-            <div class="movie-card">
-                <span class="badge">Hot</span>
-                <img src="images/guntur kaaram.jpeg.jpg" alt="Guntur Kaaram" class="movie-poster">
-                <div class="movie-info">
-                    <h3 class="movie-title">Guntur Kaaram</h3>
-                    <p class="movie-genre">Action/Drama</p>
-                    <div class="movie-rating">
-                      <i class="fas fa-star"></i> 4.4/5
-                    </div>
-                    <button class="book-btn" onclick="bookMovie('Guntur Kaaram')">
-                      <i class="fas fa-ticket-alt"></i> Book Now
-                    </button>
-                  </div>
-                </div>    
-            </div>
-  </section>
+  
+  
   <section id="Upcoming">
     <div class="section-header">
         <h2 class="section-title">Upcoming Movies</h2>
@@ -1034,7 +706,7 @@
     <div class="movie-container">
         <div class="movie-card">
             <span class="badge">Coming Soon</span>
-            <img src="images/Thunderbolts.jpg" alt="Thunderbolts" class="movie-poster">
+            <img src="Thunderbolts.jpg" alt="Thunderbolts" class="movie-poster">
             <div class="movie-info">
                 <h3 class="movie-title">Thunderbolts</h3>
                 <p class="movie-genre">Superhero/Action</p>
@@ -1049,7 +721,7 @@
         
         <div class="movie-card">
             <span class="badge">Coming Soon</span>
-            <img src="images/Baghhi4.jpeg.jpg" alt="Baaghi 4" class="movie-poster">
+            <img src="Baghhi4.jpeg" alt="Baaghi 4" class="movie-poster">
             <div class="movie-info">
                 <h3 class="movie-title">Baaghi 4</h3>
                 <p class="movie-genre">Action/Drama</p>
@@ -1063,7 +735,7 @@
         </div>
         <div class="movie-card">
             <span class="badge">Coming Soon</span>
-            <img src="images/smile part two.jpeg.jpg" alt="Smile Part Two" class="movie-poster">
+            <img src="smile part two.jpeg" alt="Smile Part Two" class="movie-poster">
             <div class="movie-info">
                 <h3 class="movie-title">Smile Part Two</h3>
                 <p class="movie-genre">Horror</p>
@@ -1077,7 +749,7 @@
         </div>
         <div class="movie-card">
             <span class="badge">Coming Soon</span>
-            <img src="images/a quiet place day one.jpeg.jpg" alt="A Quiet Place Day One" class="movie-poster">
+            <img src="a quiet place day one.jpeg" alt="A Quiet Place Day One" class="movie-poster">
             <div class="movie-info">
                 <h3 class="movie-title">A Quiet Place Day One</h3>
                 <p class="movie-genre">Horror/Thriller</p>
